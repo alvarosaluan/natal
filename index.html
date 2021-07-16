@@ -76,10 +76,14 @@
                     <p>Inscreva seu e-mail e receba nossas novidades em primeira mão!</p>    
                 </div><!--SECTIONHEAD END-->            
 
-                <!--MAILCHIMP FORM START-->  
-                <div class="mailchimp">
-                    <form action="http://evenfly.us8.list-manage.com/subscribe/post?u=62bca83399cf0083546588b62&amp;id=f85a072005" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate><!-- #NOTE: Replace this with your Mailchimp action URL -->
-                                                      
+               // <!--MAILCHIMP FORM START-->  
+               // <div class="mailchimp">
+             	<form action=localstorage method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate><!-- #NOTE: Replace this with your Mailchimp action URL -->
+                        submit(value){
+    				console.log(value);
+    			localStorage.setItem('data',JSON.stringify(value));
+  			} 
+			
                             <input type="text" value="" name="FNAME" id="mce-FNAME" placeholder="Nome" required>
                             <input type="email" value="" name="EMAIL" id="mce-EMAIL" placeholder="E-mail" required>
                             <input type="submit" value="Inscrever-se" name="subscribe" id="mc-embedded-subscribe" class="btn btn-inverse">
