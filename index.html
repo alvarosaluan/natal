@@ -77,12 +77,18 @@
                 </div><!--SECTIONHEAD END-->            
 
                <!--MAILCHIMP FORM START-->  
-               <div class="mailchimp">
-             	<form action=localstorage method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate><!-- #NOTE: Replace this with your Mailchimp action URL -->
+               <div class="forms">
+             <script  type="text/javascript">
+  		function store(){
+     		var inputEmail= document.getElementById("email");
+     		localStorage.setItem("email", inputEmail.value);
+   		}		    
+		 <!--	<form action=localstorage method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate><!-- #NOTE: Replace this with your Mailchimp action URL -->
                        		
                             <input type="text" value="" name="FNAME" id="mce-FNAME" placeholder="Nome" required>
                             <input type="email" value="" name="EMAIL" id="mce-EMAIL" placeholder="E-mail" required>
                             <input type="submit" value="Inscrever-se" name="subscribe" id="mc-embedded-subscribe" class="btn btn-inverse">
+				    </script>
                     </form>
                 </div>
             </div><!--SUBSCRIBE CONTAINER END-->
