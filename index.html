@@ -76,19 +76,25 @@
                     <p>Inscreva seu e-mail e receba nossas novidades em primeira mão!</p>    
                 </div><!--SECTIONHEAD END-->            
 
-               <!--MAILCHIMP FORM START-->  
+               <!--FORM START-->  
   <div class="forms">
     <form name="contact" data-netlify="true" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
 	<p>
-    		<label>Seu nome: <input type="text" name="name" /></label>   
-  	</p>
-  	<p>
-    		<label>Seu e-mail: <input type="email" name="email" /></label>
+    		<label>Seu e-mail: <input type="email" id="email" /></label>
   	</p>
   <button type="submit" name="subscribe" id="mc-embedded-subscribe" class="btn btn-inverse">Enviar</button>
-  	</p>
-			
+    </form>
 
+  <script>    
+    var email = document.getElementById('email');
+
+    document.getElementById('salvar').addEventListener('click', function() {
+      localStorage.email = email.value;
+    });
+</script>
+
+
+  	</p>	
                 </div>
             </div><!--SUBSCRIBE CONTAINER END-->
         </div><!--OVERLAY END-->
